@@ -21,18 +21,19 @@ var expectedResponse = "[![Imperial+War+Museum](https://maps.googleapis.com/maps
 assert(normalResult === expectedResponse, "Response matches expected format");
 
 console.info("Unit tests finished");
-// console.info("Starting integration tests...");
-// tester.builder()
-//   .withContent("\"https://www.google.co.nz/maps/place/Imperial+War+Museum/@51.4958308,-0.1108502,17z/data=!3m1!4b1!4m5!3m4!1s0x4876012c1f3ceed3:0xfed51d88d007b387!8m2!3d51.4958308!4d-0.1086615\" | placeMap")
-//   .withLocalPlugin(__dirname)
-//   .create()
-//   .then(function(result) {
-//     console.log(result[0].content);
-//   })
-//   .fin(function() {
-//     console.log("Integration tests finished");
-//   })
-//   .done();
+console.info("Starting integration tests...");
+var expectedHtml = '<p><a href="https://www.google.co.nz/maps/place/Imperial+War+Museum/@51.4958308,-0.1108502,17z/data=!3m1!4b1!4m5!3m4!1s0x4876012c1f3ceed3:0xfed51d88d007b387!8m2!3d51.4958308!4d-0.1086615" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?center=51.4958308,-0.1108502&amp;zoom=17&amp;size=600x600" alt="Imperial+War+Museum"></a></p>';
+tester.builder()
+  .withContent("{{ \"https://www.google.co.nz/maps/place/Imperial+War+Museum/@51.4958308,-0.1108502,17z/data=!3m1!4b1!4m5!3m4!1s0x4876012c1f3ceed3:0xfed51d88d007b387!8m2!3d51.4958308!4d-0.1086615\" | placeMap }}")
+  .withBookJson({"plugins": ["googlemaps-place-embed"]})
+  .create()
+  .then(function(result) {
+    assert(result[0].content, expectedHtml, "Produced HTML matches expected response");
+  })
+  .fin(function() {
+    console.log("Integration tests finished");
+  })
+  .done();
 
 
 
