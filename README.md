@@ -10,7 +10,7 @@ Input:
 
 Output:
 
-![Screenshot of plugin output](https://raw.githubusercontent.com/joshmcarthur/gitbook-googlemaps-place-embed/branch/master/doc/output.jpg)
+![Screenshot of plugin output](https://raw.githubusercontent.com/joshmcarthur/gitbook-plugin-googlemaps-place-embed/master/doc/output.jpg)
 
 If the URL is not recognised, it will return the passed in content unaltered. The plugin is, however, permissive of different TLDs (.co.nz, .com, .com.au, etc). 
 
