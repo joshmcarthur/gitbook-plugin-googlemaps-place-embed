@@ -1,5 +1,7 @@
 # gitbook-plugin-googlemaps-place-embed
 
+[![Build Status](https://travis-ci.org/joshmcarthur/gitbook-plugin-googlemaps-place-embed.svg?branch=master)](https://travis-ci.org/joshmcarthur/gitbook-plugin-googlemaps-place-embed)
+
 For use with [Gitbook.com](https://gitbook.com), or [gitbook-cli](https://github.com/gitbookio/gitbook-cli).
 
 This plugin implements a filter:
