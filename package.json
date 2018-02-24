@@ -1,0 +1,17 @@
+{
+  "name": "gitbook-plugin-googlemaps-place-embed",
+  "version": "0.0.3",
+  "description": "Replace Google Maps Place URLs with a static map that links to the map",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Josh McArthur <joshua.mcarthur@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "gitbook": ">= 3.2.3"
+  },
+  "devDependencies": {
+    "gitbook-tester": "^1.4.3"
+  }
+}
